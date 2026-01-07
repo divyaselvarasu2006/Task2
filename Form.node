@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+    <script>
+        function validateForm() {
+            let name = document.forms["myForm"]["username"].value;
+            if (name.length < 3) {
+                alert("Name must be at least 3 characters");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body style="background-color: lightblue;">
+    <form name="myForm" action="/submit" method="POST" onsubmit="return validateForm()">
+        <input type="text" name="username">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
